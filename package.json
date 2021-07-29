@@ -1,0 +1,22 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass ./src/style.scss:./src/style.css -w",
+    "prefix-watch": "postcss --watch ./src/style.css --use autoprefixer -d ./public",
+    "deploy": "sass --style compressed ./src/style.scss:./style.css && npm run prefix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErwSim/SimoninErwan_3_28072021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErwSim/SimoninErwan_3_28072021/issues"
+  },
+  "homepage": "https://github.com/ErwSim/SimoninErwan_3_28072021#readme"
+}

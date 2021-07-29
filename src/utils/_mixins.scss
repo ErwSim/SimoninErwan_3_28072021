@@ -1,0 +1,30 @@
+// Breakpoints
+@mixin mobile-ls-only {
+  @media screen and (min-width: map-get($bp, mobile-ls)) and (max-width: map-get($bp, tablet)) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: map-get($bp, tablet)) and (max-width: map-get($bp, computer)) {
+    @content;
+  }
+}
+
+@mixin computer-only {
+  @media screen and (min-width: map-get($bp, computer)) {
+    @content;
+  }
+}
+
+// Others
+@mixin center-item {
+  display: block;
+  margin: auto;
+}
+
+@mixin h1-m0 {
+  h1 {
+    margin: 0;
+  }
+}
