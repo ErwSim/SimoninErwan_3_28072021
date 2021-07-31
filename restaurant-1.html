@@ -22,11 +22,11 @@
     ></script>
   </head>
   <body>
-    <div class="loader">
-      <div class="loader__inner"></div>
-    </div>
-    <div class="container container--loader">
+    <div class="container">
       <header class="header">
+        <a href="/" title="Retourner à l'accueil" class="header__return-home">
+          <i class="fas fa-arrow-left"></i>
+        </a>
         <img src="public/images/ohmyfood@2x.svg" alt="Ohmyfood!" class="logo" />
       </header>
 
@@ -42,11 +42,7 @@
           Découvrez des restaurants d'exception, sélectionnés par nos soins.
         </h3>
 
-        <div class="mt30px">
-          <a href="#restaurants" class="btn btn__main" role="button">
-            Explorer nos restaurants
-          </a>
-        </div>
+        <button class="btn btn__main">Explorer nos restaurants</button>
       </section>
 
       <section class="pl20px pr20px">
@@ -79,7 +75,7 @@
         </div>
       </section>
 
-      <section class="restaurants-list" id="restaurants">
+      <section class="restaurants-list">
         <h1 class="restaurants-list__title">Restaurants</h1>
 
         <aside class="restaurants-list__card-wrapper">
