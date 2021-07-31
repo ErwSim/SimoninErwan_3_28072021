@@ -43,10 +43,10 @@
 .btn__icon {
   font-size: 20px;
 }
-.btn__icon:hover .fas {
+.btn__icon:hover .far {
   color: transparent;
 }
-.btn__icon:hover > .fas {
+.btn__icon:hover > .far {
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
   animation: an 1s forwards;
@@ -54,9 +54,11 @@
 @keyframes an {
   from {
     transform: scale(0);
+    font-weight: 900;
   }
   to {
     transform: scale(1);
+    font-weight: 900;
   }
 }
 
