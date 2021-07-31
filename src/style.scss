@@ -3,12 +3,20 @@
 
 @import "./components/buttons";
 
+@import "./layouts/home";
 @import "./layouts/margins-paddings";
 
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: map-get($fonts, global);
+
+  @include animation-scrollbar;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 *,
@@ -20,6 +28,8 @@ body {
 .container {
   width: 100vw;
   margin: auto;
+
+  @include animation-hide-container;
 
   @include mobile-ls-only {
     width: map-get($bp, mobile-ls);
@@ -72,6 +82,11 @@ body {
   &__wrapper {
     display: flex;
     flex-direction: column;
+
+    @include computer-only {
+      flex-direction: row;
+      gap: 20px;
+    }
   }
 
   &__step {
@@ -118,5 +133,131 @@ body {
     padding-top: 4px;
     border-radius: 50%;
     z-index: 1;
+  }
+}
+
+.restaurants-list {
+  background-color: map-get($colors, light-grey);
+  padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 80px;
+
+  @include computer-only {
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.2);
+  }
+
+  &__title {
+    @include computer-only {
+      padding-left: 20px;
+    }
+  }
+
+  &__card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include computer-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include tablet-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include mobile-ls-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+
+    @include computer-only {
+      flex: 1 0 40%;
+    }
+
+    @include tablet-only {
+      flex: 1 0 40%;
+    }
+
+    @include mobile-ls-only {
+      flex: 1 0 40%;
+    }
+
+    img {
+      border-radius: 15px 15px 0 0;
+      object-fit: cover;
+      object-position: 100% 60%;
+      height: 170px;
+      width: 100%;
+    }
+
+    &__new {
+      background-color: map-get($colors, tertiary);
+      border-radius: 3px;
+      box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+      position: relative;
+      width: 25%;
+      top: -160px;
+      float: right;
+      margin-right: 10px;
+      padding: 5px;
+      text-align: center;
+      font-weight: bold;
+      color: darken(map-get($colors, tertiary), 40%);
+      font-size: 13px;
+      user-select: none;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      width: 100%;
+    }
+
+    &__title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.footer {
+  background-color: map-get($colors, darker-grey);
+  color: white;
+  padding: 20px;
+
+  &__brand {
+    font-family: map-get($fonts, logo-titles);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 0;
+    line-height: 25px;
+  }
+
+  &__icon {
+    width: 20px;
+
+    &--rotate {
+      transform: rotate(-45deg);
+    }
   }
 }

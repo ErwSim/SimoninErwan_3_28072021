@@ -17,6 +17,24 @@
   }
 }
 
+// Buttons
+@mixin btn-normal {
+  background: linear-gradient(
+    map-get($colors, secondary),
+    map-get($colors, primary)
+  );
+  box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.2);
+}
+
+@mixin btn-hover {
+  background: linear-gradient(
+    lighten(map-get($colors, secondary), 5%),
+    lighten(map-get($colors, primary), 5%)
+  );
+
+  box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.4);
+}
+
 // Others
 @mixin center-item {
   display: block;

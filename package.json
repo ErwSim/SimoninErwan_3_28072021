@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-watch": "sass ./src/style.scss:./src/style.css -w",
-    "prefix-watch": "postcss --watch ./src/style.css --use autoprefixer -d ./public",
-    "deploy": "sass --style compressed ./src/style.scss:./style.css && npm run prefix"
+    "sass-watch": "sass ./src/style.scss:./public/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -15,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/ErwSim/SimoninErwan_3_28072021/issues"
   },

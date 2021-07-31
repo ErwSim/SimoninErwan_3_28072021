@@ -1,0 +1,64 @@
+@import "./mixins";
+
+// Loader
+@mixin animation-scrollbar {
+  @keyframes animation-scrollbar {
+    from {
+      overflow: hidden;
+    }
+    to {
+      overflow: auto;
+    }
+  }
+
+  animation: animation-scrollbar 7s backwards;
+}
+
+@mixin animation-hide-container {
+  @keyframes animation-hide-container {
+    from {
+      display: none;
+      opacity: 0;
+    }
+    99% {
+      display: none;
+      opacity: 0;
+    }
+    to {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  animation: animation-hide-container 2s backwards;
+}
+
+// Buttons
+
+@mixin animation-btn-hover {
+  @keyframes animation-btn-hover {
+    from {
+      @include btn-normal;
+    }
+    to {
+      @include btn-hover;
+    }
+  }
+
+  animation: animation-btn-hover ease-in;
+  transition-duration: 0.5s;
+}
+
+@mixin animation-btn-normal {
+  @keyframes animation-btn-normal {
+    from {
+      @include btn-hover;
+    }
+    to {
+      @include btn-normal;
+    }
+  }
+
+  animation: animation-btn-normal ease-in;
+  transition-duration: 0.5s;
+}
