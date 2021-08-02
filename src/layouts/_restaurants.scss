@@ -1,0 +1,57 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.restaurant-image {
+  width: 100vw;
+
+  object-fit: cover;
+  object-position: 100% 0%;
+
+  @include mobile-ls-only {
+    width: map-get($bp, mobile-ls);
+    height: 300px;
+  }
+
+  @include tablet-only {
+    width: map-get($bp, tablet);
+    height: 400px;
+  }
+
+  @include computer-only {
+    width: map-get($bp, computer);
+    height: 550px;
+  }
+}
+
+.menu {
+  position: absolute;
+  bottom: -5px;
+  width: 100vw;
+
+  @include mobile-ls-only {
+    width: map-get($bp, mobile-ls);
+  }
+
+  @include tablet-only {
+    width: map-get($bp, tablet);
+  }
+
+  @include computer-only {
+    width: map-get($bp, computer);
+  }
+
+  background-color: map-get($colors, dark-grey);
+  border-radius: 50px 50px 0 0;
+  padding: 20px;
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: inline;
+    font-family: map-get($fonts, logo-titles);
+    margin: 0;
+  }
+}
