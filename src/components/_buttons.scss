@@ -42,11 +42,11 @@
 
         @keyframes an {
           from {
-            transform: scale(0);
+            clip-path: circle(0%);
             font-weight: 900;
           }
           to {
-            transform: scale(1);
+            clip-path: circle(100%);
             font-weight: 900;
           }
         }

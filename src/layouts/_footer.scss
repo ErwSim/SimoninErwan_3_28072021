@@ -1,0 +1,32 @@
+.footer {
+  background-color: map-get($colors, darker-grey);
+  color: white;
+  padding: 20px;
+
+  > * {
+    @include computer-only {
+      width: map-get($bp, computer);
+      margin: auto;
+    }
+  }
+
+  &__brand {
+    font-family: map-get($fonts, logo-titles);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 0;
+    line-height: 28px;
+  }
+
+  &__icon {
+    width: 20px;
+
+    &--rotate {
+      transform: rotate(-45deg);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+
+  &__return-home {
+    position: absolute;
+    margin-left: 20px;
+    font-size: 26px;
+  }
+}
+
+.logo {
+  @include center-item;
+}
