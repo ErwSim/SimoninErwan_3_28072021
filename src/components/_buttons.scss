@@ -5,6 +5,7 @@
   cursor: pointer;
   border: unset;
   background: none;
+  display: inline-block;
 
   &__main {
     @include btn-normal;
@@ -14,6 +15,8 @@
 
     font-weight: bold;
     font-size: 16px;
+    min-width: 200px;
+    text-align: center;
 
     border-radius: 45px;
 
