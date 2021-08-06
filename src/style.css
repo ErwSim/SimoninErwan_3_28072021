@@ -1,0 +1,1244 @@
+.btn {
+  cursor: pointer;
+  border: unset;
+  background: none;
+}
+.btn__main {
+  background: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: animation-btn-normal ease-in;
+  animation-duration: 0.5s;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 45px;
+  padding: 15px;
+}
+@keyframes animation-btn-normal {
+  from {
+    background: linear-gradient(#ff93e1, #a16be0);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+.btn__main:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  animation: animation-btn-hover ease-in;
+  animation-duration: 0.5s;
+}
+@keyframes animation-btn-hover {
+  from {
+    background: linear-gradient(#ff79da, #9356dc);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    background: linear-gradient(#ff93e1, #a16be0);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+.btn__icon {
+  font-size: 20px;
+}
+.btn__icon:hover .far {
+  color: transparent;
+}
+.btn__icon:hover > .far {
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  animation: an 1s forwards;
+}
+@keyframes an {
+  from {
+    clip-path: circle(0%);
+    font-weight: 900;
+  }
+  to {
+    clip-path: circle(100%);
+    font-weight: 900;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.card--home {
+  width: 330px;
+}
+.card--restaurant {
+  display: flex;
+  height: 73px;
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    flex: 1 0 40%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .card {
+    flex: 1 0 40%;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .card {
+    flex: 1 0 40%;
+  }
+}
+.card img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  object-position: 100% 60%;
+  height: 170px;
+  width: 100%;
+}
+.card__new {
+  background-color: #99e2d0;
+  border-radius: 3px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 25%;
+  bottom: 160px;
+  margin-bottom: -30px;
+  float: right;
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #278870;
+  font-size: 13px;
+  user-select: none;
+}
+.card__content {
+  display: flex;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  font-size: 14px;
+}
+.card__content > * {
+  flex-grow: 1;
+}
+.card__content--restaurant {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 1440px) {
+  .card__content--restaurant {
+    width: 300px;
+  }
+}
+.card__content__btn {
+  text-align: right;
+  padding-right: 15px;
+}
+.card__price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 11%;
+  padding-right: 15px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .card__price {
+    margin-top: 6%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card__price {
+    margin-top: 8.75%;
+  }
+}
+.card__add {
+  background-color: #99e2d0;
+  border-radius: 0 14px 14px 0px;
+  width: 0px;
+  max-width: 60px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animation-card-add-out ease-in-out;
+  animation-duration: 0.2s;
+}
+@keyframes animation-card-add-out {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+.card:hover .card__add {
+  width: 100px;
+  animation: animation-card-add-in ease-in;
+  animation-duration: 1s;
+}
+.card:hover .card__add > i {
+  display: inline-block;
+  transform: rotate(360deg);
+  animation: animation-card-add-spin;
+  animation-duration: 1s;
+}
+@keyframes animation-card-add-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animation-card-add-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.card__title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.header__return-home {
+  position: absolute;
+  margin-left: 20px;
+  font-size: 26px;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+}
+
+.footer {
+  background-color: #383838;
+  color: white;
+  padding: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .footer > * {
+    width: 1440px;
+    margin: auto;
+  }
+}
+.footer__brand {
+  font-family: "Shrikhand";
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 0;
+  line-height: 28px;
+}
+.footer__icon {
+  width: 20px;
+}
+.footer__icon--rotate {
+  transform: rotate(-45deg);
+}
+
+.loader {
+  position: fixed;
+  top: calc(50% - 50px);
+  right: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 8px solid #9356dc;
+  box-shadow: 5px 5px 5px rgba(255, 121, 218, 0.2);
+  animation: animation-loader 2.02s forwards;
+}
+@keyframes animation-loader {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+    transform-origin: top right;
+  }
+  99% {
+    transform: rotate(360deg);
+    transform-origin: bottom right;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.loader__inner {
+  position: fixed;
+  top: calc(50% - 50px);
+  right: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 8px solid #ff79da;
+  box-shadow: 5px 5px 5px rgba(147, 86, 220, 0.2);
+  animation: animation-loader__inner 2.02s forwards;
+}
+@keyframes animation-loader__inner {
+  from {
+    transform: rotate(0deg);
+    transform-origin: bottom left;
+  }
+  70% {
+    transform: rotate(-180deg);
+    transform-origin: top right;
+  }
+  99% {
+    transform: rotate(-360deg);
+    transform-origin: top left;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.localisation-wrapper {
+  box-shadow: inset 0 8px 8px -8px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 34px;
+  text-align: center;
+  background-color: #eaeaea;
+}
+.localisation-wrapper > * {
+  margin-right: 10px;
+}
+
+.explore-restaurants {
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.explore-restaurants h1 {
+  margin: 0;
+}
+.explore-restaurants h3 {
+  opacity: 0.5;
+}
+
+.help-steps__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1440px) {
+  .help-steps__wrapper {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.help-steps__step {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+.help-steps__item {
+  position: absolute;
+  background-color: #f6f6f6;
+  width: 100%;
+  padding: 20px;
+  padding-left: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+@media screen and (min-width: 1440px) {
+  .help-steps__item {
+    background-color: white;
+  }
+}
+.help-steps__item__icon {
+  opacity: 0.5;
+  padding-right: 20px;
+}
+.help-steps__item__last-icon {
+  color: #9356dc;
+  padding-right: 20px;
+}
+.help-steps__last {
+  background-color: #f2eafb;
+}
+.help-steps__number {
+  position: absolute;
+  background-color: #9356dc;
+  color: white;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+  left: -10px;
+  top: 15px;
+  padding-top: 4px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.restaurants-list {
+  background-color: #f6f6f6;
+  padding: 10px;
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+@media screen and (min-width: 1440px) {
+  .restaurants-list__title {
+    padding-left: 20px;
+  }
+}
+.restaurants-list__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .restaurants-list__card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .restaurants-list__card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .restaurants-list__card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.mt5px {
+  margin-top: 5px;
+}
+
+.ml5px {
+  margin-left: 5px;
+}
+
+.mr5px {
+  margin-right: 5px;
+}
+
+.mb5px {
+  margin-bottom: 5px;
+}
+
+.pt5px {
+  padding-top: 5px;
+}
+
+.pl5px {
+  padding-left: 5px;
+}
+
+.pr5px {
+  padding-right: 5px;
+}
+
+.pb5px {
+  padding-bottom: 5px;
+}
+
+.mt10px {
+  margin-top: 10px;
+}
+
+.ml10px {
+  margin-left: 10px;
+}
+
+.mr10px {
+  margin-right: 10px;
+}
+
+.mb10px {
+  margin-bottom: 10px;
+}
+
+.pt10px {
+  padding-top: 10px;
+}
+
+.pl10px {
+  padding-left: 10px;
+}
+
+.pr10px {
+  padding-right: 10px;
+}
+
+.pb10px {
+  padding-bottom: 10px;
+}
+
+.mt15px {
+  margin-top: 15px;
+}
+
+.ml15px {
+  margin-left: 15px;
+}
+
+.mr15px {
+  margin-right: 15px;
+}
+
+.mb15px {
+  margin-bottom: 15px;
+}
+
+.pt15px {
+  padding-top: 15px;
+}
+
+.pl15px {
+  padding-left: 15px;
+}
+
+.pr15px {
+  padding-right: 15px;
+}
+
+.pb15px {
+  padding-bottom: 15px;
+}
+
+.mt20px {
+  margin-top: 20px;
+}
+
+.ml20px {
+  margin-left: 20px;
+}
+
+.mr20px {
+  margin-right: 20px;
+}
+
+.mb20px {
+  margin-bottom: 20px;
+}
+
+.pt20px {
+  padding-top: 20px;
+}
+
+.pl20px {
+  padding-left: 20px;
+}
+
+.pr20px {
+  padding-right: 20px;
+}
+
+.pb20px {
+  padding-bottom: 20px;
+}
+
+.mt25px {
+  margin-top: 25px;
+}
+
+.ml25px {
+  margin-left: 25px;
+}
+
+.mr25px {
+  margin-right: 25px;
+}
+
+.mb25px {
+  margin-bottom: 25px;
+}
+
+.pt25px {
+  padding-top: 25px;
+}
+
+.pl25px {
+  padding-left: 25px;
+}
+
+.pr25px {
+  padding-right: 25px;
+}
+
+.pb25px {
+  padding-bottom: 25px;
+}
+
+.mt30px {
+  margin-top: 30px;
+}
+
+.ml30px {
+  margin-left: 30px;
+}
+
+.mr30px {
+  margin-right: 30px;
+}
+
+.mb30px {
+  margin-bottom: 30px;
+}
+
+.pt30px {
+  padding-top: 30px;
+}
+
+.pl30px {
+  padding-left: 30px;
+}
+
+.pr30px {
+  padding-right: 30px;
+}
+
+.pb30px {
+  padding-bottom: 30px;
+}
+
+.mt35px {
+  margin-top: 35px;
+}
+
+.ml35px {
+  margin-left: 35px;
+}
+
+.mr35px {
+  margin-right: 35px;
+}
+
+.mb35px {
+  margin-bottom: 35px;
+}
+
+.pt35px {
+  padding-top: 35px;
+}
+
+.pl35px {
+  padding-left: 35px;
+}
+
+.pr35px {
+  padding-right: 35px;
+}
+
+.pb35px {
+  padding-bottom: 35px;
+}
+
+.mt40px {
+  margin-top: 40px;
+}
+
+.ml40px {
+  margin-left: 40px;
+}
+
+.mr40px {
+  margin-right: 40px;
+}
+
+.mb40px {
+  margin-bottom: 40px;
+}
+
+.pt40px {
+  padding-top: 40px;
+}
+
+.pl40px {
+  padding-left: 40px;
+}
+
+.pr40px {
+  padding-right: 40px;
+}
+
+.pb40px {
+  padding-bottom: 40px;
+}
+
+.mt45px {
+  margin-top: 45px;
+}
+
+.ml45px {
+  margin-left: 45px;
+}
+
+.mr45px {
+  margin-right: 45px;
+}
+
+.mb45px {
+  margin-bottom: 45px;
+}
+
+.pt45px {
+  padding-top: 45px;
+}
+
+.pl45px {
+  padding-left: 45px;
+}
+
+.pr45px {
+  padding-right: 45px;
+}
+
+.pb45px {
+  padding-bottom: 45px;
+}
+
+.mt50px {
+  margin-top: 50px;
+}
+
+.ml50px {
+  margin-left: 50px;
+}
+
+.mr50px {
+  margin-right: 50px;
+}
+
+.mb50px {
+  margin-bottom: 50px;
+}
+
+.pt50px {
+  padding-top: 50px;
+}
+
+.pl50px {
+  padding-left: 50px;
+}
+
+.pr50px {
+  padding-right: 50px;
+}
+
+.pb50px {
+  padding-bottom: 50px;
+}
+
+.mt55px {
+  margin-top: 55px;
+}
+
+.ml55px {
+  margin-left: 55px;
+}
+
+.mr55px {
+  margin-right: 55px;
+}
+
+.mb55px {
+  margin-bottom: 55px;
+}
+
+.pt55px {
+  padding-top: 55px;
+}
+
+.pl55px {
+  padding-left: 55px;
+}
+
+.pr55px {
+  padding-right: 55px;
+}
+
+.pb55px {
+  padding-bottom: 55px;
+}
+
+.mt60px {
+  margin-top: 60px;
+}
+
+.ml60px {
+  margin-left: 60px;
+}
+
+.mr60px {
+  margin-right: 60px;
+}
+
+.mb60px {
+  margin-bottom: 60px;
+}
+
+.pt60px {
+  padding-top: 60px;
+}
+
+.pl60px {
+  padding-left: 60px;
+}
+
+.pr60px {
+  padding-right: 60px;
+}
+
+.pb60px {
+  padding-bottom: 60px;
+}
+
+.mt65px {
+  margin-top: 65px;
+}
+
+.ml65px {
+  margin-left: 65px;
+}
+
+.mr65px {
+  margin-right: 65px;
+}
+
+.mb65px {
+  margin-bottom: 65px;
+}
+
+.pt65px {
+  padding-top: 65px;
+}
+
+.pl65px {
+  padding-left: 65px;
+}
+
+.pr65px {
+  padding-right: 65px;
+}
+
+.pb65px {
+  padding-bottom: 65px;
+}
+
+.mt70px {
+  margin-top: 70px;
+}
+
+.ml70px {
+  margin-left: 70px;
+}
+
+.mr70px {
+  margin-right: 70px;
+}
+
+.mb70px {
+  margin-bottom: 70px;
+}
+
+.pt70px {
+  padding-top: 70px;
+}
+
+.pl70px {
+  padding-left: 70px;
+}
+
+.pr70px {
+  padding-right: 70px;
+}
+
+.pb70px {
+  padding-bottom: 70px;
+}
+
+.mt75px {
+  margin-top: 75px;
+}
+
+.ml75px {
+  margin-left: 75px;
+}
+
+.mr75px {
+  margin-right: 75px;
+}
+
+.mb75px {
+  margin-bottom: 75px;
+}
+
+.pt75px {
+  padding-top: 75px;
+}
+
+.pl75px {
+  padding-left: 75px;
+}
+
+.pr75px {
+  padding-right: 75px;
+}
+
+.pb75px {
+  padding-bottom: 75px;
+}
+
+.mt80px {
+  margin-top: 80px;
+}
+
+.ml80px {
+  margin-left: 80px;
+}
+
+.mr80px {
+  margin-right: 80px;
+}
+
+.mb80px {
+  margin-bottom: 80px;
+}
+
+.pt80px {
+  padding-top: 80px;
+}
+
+.pl80px {
+  padding-left: 80px;
+}
+
+.pr80px {
+  padding-right: 80px;
+}
+
+.pb80px {
+  padding-bottom: 80px;
+}
+
+.mt85px {
+  margin-top: 85px;
+}
+
+.ml85px {
+  margin-left: 85px;
+}
+
+.mr85px {
+  margin-right: 85px;
+}
+
+.mb85px {
+  margin-bottom: 85px;
+}
+
+.pt85px {
+  padding-top: 85px;
+}
+
+.pl85px {
+  padding-left: 85px;
+}
+
+.pr85px {
+  padding-right: 85px;
+}
+
+.pb85px {
+  padding-bottom: 85px;
+}
+
+.mt90px {
+  margin-top: 90px;
+}
+
+.ml90px {
+  margin-left: 90px;
+}
+
+.mr90px {
+  margin-right: 90px;
+}
+
+.mb90px {
+  margin-bottom: 90px;
+}
+
+.pt90px {
+  padding-top: 90px;
+}
+
+.pl90px {
+  padding-left: 90px;
+}
+
+.pr90px {
+  padding-right: 90px;
+}
+
+.pb90px {
+  padding-bottom: 90px;
+}
+
+.mt95px {
+  margin-top: 95px;
+}
+
+.ml95px {
+  margin-left: 95px;
+}
+
+.mr95px {
+  margin-right: 95px;
+}
+
+.mb95px {
+  margin-bottom: 95px;
+}
+
+.pt95px {
+  padding-top: 95px;
+}
+
+.pl95px {
+  padding-left: 95px;
+}
+
+.pr95px {
+  padding-right: 95px;
+}
+
+.pb95px {
+  padding-bottom: 95px;
+}
+
+.mt100px {
+  margin-top: 100px;
+}
+
+.ml100px {
+  margin-left: 100px;
+}
+
+.mr100px {
+  margin-right: 100px;
+}
+
+.mb100px {
+  margin-bottom: 100px;
+}
+
+.pt100px {
+  padding-top: 100px;
+}
+
+.pl100px {
+  padding-left: 100px;
+}
+
+.pr100px {
+  padding-right: 100px;
+}
+
+.pb100px {
+  padding-bottom: 100px;
+}
+
+[data-dish="1"] {
+  --dish: 1;
+}
+
+[data-dish="2"] {
+  --dish: 2;
+}
+
+[data-dish="3"] {
+  --dish: 3;
+}
+
+.restaurant-image {
+  width: 100vw;
+  max-height: 300px;
+  z-index: 1;
+  object-fit: cover;
+  object-position: 100% 60%;
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .restaurant-image {
+    width: 640px;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .restaurant-image {
+    width: 768px;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurant-image {
+    width: 1440px;
+    height: 800px;
+  }
+}
+
+.menu {
+  z-index: 2;
+  margin-top: -40px;
+  width: 100vw;
+  background-color: #eaeaea;
+  border-radius: 50px 50px 0 0;
+  padding: 20px;
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .menu {
+    width: 640px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .menu {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .menu {
+    width: 1440px;
+  }
+}
+.menu__title-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__title {
+  display: inline;
+  font-family: "Shrikhand";
+  margin: 0;
+  font-size: 30px;
+}
+.menu__part {
+  margin-top: 20px;
+  opacity: 1;
+  animation: animation-fade-in both;
+  animation-duration: 2s;
+  animation-delay: calc(0.4s * var(--dish));
+}
+@keyframes animation-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu__part__title {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.menu__part__title:after {
+  display: block;
+  content: "";
+  width: 45px;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 6px;
+}
+.menu__part__card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .menu__part__card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: #f6f6f6;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100vw;
+  margin: auto;
+}
+.container--loader {
+  animation: animation-hide-container 2s backwards;
+}
+@keyframes animation-hide-container {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  99% {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+.container--restaurant {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .container {
+    width: 640px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

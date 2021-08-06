@@ -39,8 +39,9 @@ a {
     @include animation-hide-container;
   }
 
-  &--relative {
-    position: relative;
+  &--restaurant {
+    display: flex;
+    flex-direction: column;
   }
 
   @include mobile-ls-only {

@@ -2,11 +2,23 @@
 @import "../utils/mixins";
 @import "../utils/animations";
 
+[data-dish="1"] {
+  --dish: 1;
+}
+[data-dish="2"] {
+  --dish: 2;
+}
+[data-dish="3"] {
+  --dish: 3;
+}
+
 .restaurant-image {
   width: 100vw;
+  max-height: 300px;
+  z-index: 1;
 
   object-fit: cover;
-  object-position: 100% 0%;
+  object-position: 100% 60%;
 
   @include mobile-ls-only {
     width: map-get($bp, mobile-ls);
@@ -25,8 +37,8 @@
 }
 
 .menu {
-  position: absolute;
-  bottom: -5px;
+  z-index: 2;
+  margin-top: -40px;
   width: 100vw;
 
   @include mobile-ls-only {
@@ -59,6 +71,8 @@
 
   &__part {
     margin-top: 20px;
+    opacity: 1;
+    @include animation-fade-in;
 
     &__title {
       text-transform: uppercase;
