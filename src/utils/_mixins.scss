@@ -6,7 +6,13 @@
 }
 
 @mixin tablet-only {
-  @media screen and (min-width: map-get($bp, tablet)) and (max-width: map-get($bp, computer)) {
+  @media screen and (min-width: map-get($bp, tablet)) and (max-width: map-get($bp, tablet-ls)) {
+    @content;
+  }
+}
+
+@mixin tablet-ls-only {
+  @media screen and (min-width: map-get($bp, tablet-ls)) and (max-width: map-get($bp, computer)) {
     @content;
   }
 }

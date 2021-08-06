@@ -30,6 +30,11 @@
     height: 400px;
   }
 
+  @include tablet-ls-only {
+    width: map-get($bp, tablet-ls);
+    height: 400px;
+  }
+
   @include computer-only {
     width: map-get($bp, computer);
     height: 800px;
@@ -47,6 +52,10 @@
 
   @include tablet-only {
     width: map-get($bp, tablet);
+  }
+
+  @include tablet-ls-only {
+    width: map-get($bp, tablet-ls);
   }
 
   @include computer-only {

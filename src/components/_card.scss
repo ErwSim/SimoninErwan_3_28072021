@@ -9,7 +9,23 @@
   overflow: hidden;
 
   &--home {
-    width: 330px;
+    width: 100%;
+
+    @include mobile-ls-only {
+      width: 300px;
+    }
+
+    @include tablet-only {
+      width: 360px;
+    }
+
+    @include tablet-ls-only {
+      width: 480px;
+    }
+
+    @include computer-only {
+      width: 330px;
+    }
   }
 
   &--restaurant {
@@ -22,6 +38,10 @@
   }
 
   @include tablet-only {
+    flex: 1 0 40%;
+  }
+
+  @include tablet-ls-only {
     flex: 1 0 40%;
   }
 
@@ -79,6 +99,7 @@
     }
 
     &__btn {
+      margin-top: 5%;
       text-align: right;
       padding-right: 15px;
     }
@@ -94,6 +115,14 @@
 
     @include mobile-ls-only {
       margin-top: 6%;
+    }
+
+    @include tablet-only {
+      margin-top: 5%;
+    }
+
+    @include tablet-ls-only {
+      margin-top: 4%;
     }
 
     @include computer-only {

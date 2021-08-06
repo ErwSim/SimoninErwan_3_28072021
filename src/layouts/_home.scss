@@ -180,6 +180,11 @@
       flex-wrap: wrap;
     }
 
+    @include tablet-ls-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
     @include mobile-ls-only {
       flex-direction: row;
       flex-wrap: wrap;
