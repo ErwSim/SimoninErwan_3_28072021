@@ -62,3 +62,92 @@
   animation: animation-btn-normal ease-in;
   transition-duration: 0.5s;
 }
+
+// Cards
+
+@mixin animation-fade-in {
+  @keyframes animation-fade-in {
+    from {
+      display: block;
+      opacity: 0;
+    }
+    to {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  animation: animation-fade-in both;
+  transition-duration: 1s;
+  transition-delay: calc(0.1s * var(--dish));
+}
+
+@mixin animation-card-pushl {
+  @keyframes animation-card-pushl {
+    from {
+      grid-template-columns: 1fr 1fr 0fr;
+    }
+    to {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  animation: animation-card-pushl ease-in;
+  transition-duration: 1s;
+}
+
+@mixin animation-card-pushr {
+  @keyframes animation-card-pushr {
+    from {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    to {
+      grid-template-columns: 1fr 1fr 0.1fr;
+    }
+  }
+
+  animation: animation-card-pushr ease-in;
+  transition-duration: 1s;
+}
+
+@mixin animation-card-add-in {
+  @keyframes animation-card-add-in {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  animation: animation-card-add-in ease-in;
+  transition-duration: 1s;
+}
+
+@mixin animation-card-add-out {
+  @keyframes animation-card-add-out {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0;
+    }
+  }
+
+  animation: animation-card-add-out ease-out;
+  transition-duration: 1s;
+}
+
+@mixin animation-card-add-spin {
+  @keyframes animation-card-add-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  animation: animation-card-add-spin;
+  transition-duration: 1s;
+}

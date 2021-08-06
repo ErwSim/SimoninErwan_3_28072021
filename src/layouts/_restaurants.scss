@@ -1,5 +1,6 @@
 @import "../utils/variables";
 @import "../utils/mixins";
+@import "../utils/animations";
 
 .restaurant-image {
   width: 100vw;
@@ -19,7 +20,7 @@
 
   @include computer-only {
     width: map-get($bp, computer);
-    height: 550px;
+    height: 800px;
   }
 }
 
@@ -53,5 +54,33 @@
     display: inline;
     font-family: map-get($fonts, logo-titles);
     margin: 0;
+    font-size: 30px;
+  }
+
+  &__part {
+    margin-top: 20px;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 16px;
+
+      &:after {
+        display: block;
+        content: "";
+        width: 45px;
+        border-bottom: 3px solid map-get($colors, tertiary);
+        padding-bottom: 6px;
+      }
+    }
+
+    &__card-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      @include computer-only {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   }
 }

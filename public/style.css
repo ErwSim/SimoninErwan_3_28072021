@@ -62,6 +62,187 @@
   }
 }
 
+[data-dish="1"] {
+  --dish: 1;
+}
+
+[data-dish="2"] {
+  --dish: 2;
+}
+
+[data-dish="3"] {
+  --dish: 3;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.card--restaurant {
+  display: flex;
+  height: 73px;
+  opacity: 1;
+  animation: animation-fade-in both;
+  transition-duration: 1s;
+  transition-delay: calc(0.1s * var(--dish));
+}
+@keyframes animation-fade-in {
+  from {
+    display: block;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .card {
+    flex: 1 0 40%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .card {
+    flex: 1 0 40%;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  .card {
+    flex: 1 0 40%;
+  }
+}
+.card img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  object-position: 100% 60%;
+  height: 170px;
+  width: 100%;
+}
+.card__new {
+  background-color: #99e2d0;
+  border-radius: 3px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 25%;
+  bottom: 160px;
+  margin-bottom: -30px;
+  float: right;
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #278870;
+  font-size: 13px;
+  user-select: none;
+}
+.card__content {
+  display: flex;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  font-size: 14px;
+}
+.card__content > * {
+  flex-grow: 1;
+}
+.card__content--restaurant {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 1440px) {
+  .card__content--restaurant {
+    width: 300px;
+  }
+}
+.card__content__btn {
+  text-align: right;
+  padding-right: 15px;
+}
+.card__price {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 11%;
+  padding-right: 15px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .card__price {
+    margin-top: 8.75%;
+  }
+}
+.card__add {
+  background-color: #99e2d0;
+  border-radius: 0 14px 14px 0px;
+  width: 0px;
+  max-width: 60px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animation-card-add-out ease-out;
+  transition-duration: 1s;
+}
+@keyframes animation-card-add-out {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+.card:hover {
+  animation: animation-card-pushl ease-in;
+  transition-duration: 1s;
+}
+@keyframes animation-card-pushl {
+  from {
+    grid-template-columns: 1fr 1fr 0fr;
+  }
+  to {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.card:hover .card__add {
+  width: 100px;
+  animation: animation-card-add-in ease-in;
+  transition-duration: 1s;
+}
+.card:hover .card__add > i {
+  display: inline-block;
+  transform: rotate(360deg);
+  animation: animation-card-add-spin;
+  transition-duration: 1s;
+}
+@keyframes animation-card-add-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animation-card-add-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.card__title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 18px;
+}
+
 .header {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -83,9 +264,9 @@
   color: white;
   padding: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .footer > * {
-    width: 1024px;
+    width: 1440px;
     margin: auto;
   }
 }
@@ -119,13 +300,13 @@
 }
 @keyframes animation-loader {
   from {
+    opacity: 1;
     transform: rotate(0deg);
     transform-origin: top right;
   }
   99% {
     transform: rotate(360deg);
     transform-origin: bottom right;
-    opacity: 1;
   }
   to {
     opacity: 0;
@@ -190,7 +371,7 @@
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .help-steps__wrapper {
     flex-direction: row;
     gap: 20px;
@@ -211,7 +392,7 @@
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   font-weight: bold;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .help-steps__item {
     background-color: white;
   }
@@ -247,7 +428,7 @@
   padding-top: 30px;
   padding-bottom: 80px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .restaurants-list__title {
     padding-left: 20px;
   }
@@ -258,7 +439,7 @@
   justify-content: space-between;
   gap: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .restaurants-list__card-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -266,7 +447,7 @@
     padding-right: 20px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .restaurants-list__card-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -277,60 +458,6 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-}
-.restaurants-list__card {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-@media screen and (min-width: 1024px) {
-  .restaurants-list__card {
-    flex: 1 0 40%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .restaurants-list__card {
-    flex: 1 0 40%;
-  }
-}
-@media screen and (min-width: 640px) and (max-width: 768px) {
-  .restaurants-list__card {
-    flex: 1 0 40%;
-  }
-}
-.restaurants-list__card img {
-  border-radius: 15px 15px 0 0;
-  object-fit: cover;
-  object-position: 100% 60%;
-  height: 170px;
-  width: 100%;
-}
-.restaurants-list__card__new {
-  background-color: #99e2d0;
-  border-radius: 3px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  width: 25%;
-  top: -160px;
-  float: right;
-  margin-right: 10px;
-  padding: 5px;
-  text-align: center;
-  font-weight: bold;
-  color: #278870;
-  font-size: 13px;
-  user-select: none;
-}
-.restaurants-list__card__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  width: 100%;
-}
-.restaurants-list__card__title {
-  font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .mt5px {
@@ -984,16 +1111,16 @@
     height: 300px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .restaurant-image {
     width: 768px;
     height: 400px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .restaurant-image {
-    width: 1024px;
-    height: 550px;
+    width: 1440px;
+    height: 800px;
   }
 }
 
@@ -1010,14 +1137,14 @@
     width: 640px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .menu {
     width: 768px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .menu {
-    width: 1024px;
+    width: 1440px;
   }
 }
 .menu__title-wrapper {
@@ -1028,25 +1155,41 @@
   display: inline;
   font-family: "Shrikhand";
   margin: 0;
+  font-size: 30px;
+}
+.menu__part {
+  margin-top: 20px;
+}
+.menu__part__title {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.menu__part__title:after {
+  display: block;
+  content: "";
+  width: 45px;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 6px;
+}
+.menu__part__card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .menu__part__card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto";
-  animation: animation-scrollbar 7s backwards;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   body {
     background-color: #f6f6f6;
-  }
-}
-@keyframes animation-scrollbar {
-  from {
-    overflow: hidden;
-  }
-  to {
-    overflow: auto;
   }
 }
 
@@ -1090,14 +1233,14 @@ a {
     width: 640px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1440px) {
   .container {
     width: 768px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .container {
-    width: 1024px;
+    width: 1440px;
   }
 }
 

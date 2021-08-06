@@ -1,0 +1,145 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../utils/animations";
+
+[data-dish="1"] {
+  --dish: 1;
+}
+[data-dish="2"] {
+  --dish: 2;
+}
+[data-dish="3"] {
+  --dish: 3;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+  overflow: hidden;
+
+  &--restaurant {
+    display: flex;
+    height: 73px;
+    opacity: 1;
+
+    @include animation-fade-in;
+  }
+
+  @include computer-only {
+    flex: 1 0 40%;
+  }
+
+  @include tablet-only {
+    flex: 1 0 40%;
+  }
+
+  @include mobile-ls-only {
+    flex: 1 0 40%;
+  }
+
+  img {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    object-position: 100% 60%;
+    height: 170px;
+    width: 100%;
+  }
+
+  &__new {
+    background-color: map-get($colors, tertiary);
+    border-radius: 3px;
+    box-shadow: 2px 2px 8px rgba($color: #000000, $alpha: 0.2);
+    position: relative;
+    width: 25%;
+    bottom: 160px;
+    margin-bottom: -30px;
+    float: right;
+    margin-right: 10px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: darken(map-get($colors, tertiary), 40%);
+    font-size: 13px;
+    user-select: none;
+  }
+
+  &__content {
+    display: flex;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    font-size: 14px;
+
+    > * {
+      flex-grow: 1;
+    }
+
+    &--restaurant {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      @include computer-only {
+        width: 300px;
+      }
+    }
+
+    &__btn {
+      text-align: right;
+      padding-right: 15px;
+    }
+  }
+
+  &__price {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 11%;
+    padding-right: 15px;
+    padding-left: 10px;
+
+    @include computer-only {
+      margin-top: 8.75%;
+    }
+  }
+
+  &__add {
+    background-color: map-get($colors, tertiary);
+    border-radius: 0 14px 14px 0px;
+    width: 0px;
+    max-width: 60px;
+    color: white;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include animation-card-add-out;
+  }
+
+  $c: &;
+  &:hover {
+    @include animation-card-pushl;
+    #{$c}__add {
+      width: 100px;
+
+      > i {
+        display: inline-block;
+        transform: rotate(360deg);
+        @include animation-card-add-spin;
+      }
+
+      @include animation-card-add-in;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 18px;
+  }
+}
