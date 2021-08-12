@@ -173,29 +173,11 @@
   flex: 1;
   text-align: right;
   font-weight: bold;
-  margin-top: 11%;
+  margin-top: auto;
+  position: relative;
+  bottom: 20px;
   padding-right: 15px;
   padding-left: 10px;
-}
-@media screen and (min-width: 640px) and (max-width: 768px) {
-  .card__price {
-    margin-top: 6%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .card__price {
-    margin-top: 5%;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-  .card__price {
-    margin-top: 4%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .card__price {
-    margin-top: 8.75%;
-  }
 }
 .card__add {
   background-color: #99e2d0;
@@ -269,9 +251,10 @@
 }
 
 .footer {
+  margin-top: auto;
   background-color: #383838;
   color: white;
-  padding: 20px;
+  padding: 30px;
 }
 @media screen and (min-width: 1440px) {
   .footer > * {
@@ -1245,6 +1228,9 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 1440px) {
   body {

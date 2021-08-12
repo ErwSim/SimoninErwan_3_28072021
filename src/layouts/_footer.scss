@@ -1,7 +1,8 @@
 .footer {
+  margin-top: auto;
   background-color: map-get($colors, darker-grey);
   color: white;
-  padding: 20px;
+  padding: 30px;
 
   > * {
     @include computer-only {

@@ -109,25 +109,11 @@
     flex: 1;
     text-align: right;
     font-weight: bold;
-    margin-top: 11%;
+    margin-top: auto;
+    position: relative;
+    bottom: 20px;
     padding-right: 15px;
     padding-left: 10px;
-
-    @include mobile-ls-only {
-      margin-top: 6%;
-    }
-
-    @include tablet-only {
-      margin-top: 5%;
-    }
-
-    @include tablet-ls-only {
-      margin-top: 4%;
-    }
-
-    @include computer-only {
-      margin-top: 8.75%;
-    }
   }
 
   &__add {
