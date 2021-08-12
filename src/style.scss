@@ -38,10 +38,6 @@ a {
   width: 100vw;
   margin: auto;
 
-  &--loader {
-    @include animation-hide-container;
-  }
-
   &--restaurant {
     display: flex;
     flex-direction: column;

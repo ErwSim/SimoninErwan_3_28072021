@@ -280,7 +280,27 @@
 }
 
 .loader {
-  position: fixed;
+  z-index: 100;
+  position: absolute;
+  overflow: hidden;
+  background-color: white;
+  height: 0vh;
+  width: 100vw;
+  animation: animation-loader 2.02s forwards;
+}
+@keyframes animation-loader {
+  from {
+    height: 100vh;
+  }
+  90% {
+    height: 100vh;
+  }
+  to {
+    height: 0vh;
+  }
+}
+.loader__outer {
+  position: absolute;
   top: calc(50% - 50px);
   right: calc(50% - 50px);
   width: 100px;
@@ -288,9 +308,9 @@
   border-radius: 50%;
   border: 8px solid #9356dc;
   box-shadow: 5px 5px 5px rgba(255, 121, 218, 0.2);
-  animation: animation-loader 2.02s forwards;
+  animation: animation-loader__outer 2.02s forwards;
 }
-@keyframes animation-loader {
+@keyframes animation-loader__outer {
   from {
     opacity: 1;
     transform: rotate(0deg);
@@ -306,7 +326,7 @@
   }
 }
 .loader__inner {
-  position: fixed;
+  position: absolute;
   top: calc(50% - 50px);
   right: calc(50% - 50px);
   width: 100px;
@@ -1252,23 +1272,6 @@ a {
 .container {
   width: 100vw;
   margin: auto;
-}
-.container--loader {
-  animation: animation-hide-container 2s backwards;
-}
-@keyframes animation-hide-container {
-  from {
-    display: none;
-    opacity: 0;
-  }
-  99% {
-    display: none;
-    opacity: 0;
-  }
-  to {
-    display: block;
-    opacity: 1;
-  }
 }
 .container--restaurant {
   display: flex;
