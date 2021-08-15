@@ -285,7 +285,7 @@
   overflow: hidden;
   background-color: white;
   height: 0vh;
-  width: 100vw;
+  width: 100%;
   animation: animation-loader 2.02s forwards;
 }
 @keyframes animation-loader {
@@ -409,16 +409,16 @@
     background-color: white;
   }
 }
+.help-steps__item:hover {
+  background-color: #f2eafb;
+}
+.help-steps__item:hover i {
+  color: #9356dc;
+  opacity: 1;
+}
 .help-steps__item__icon {
   opacity: 0.5;
   padding-right: 20px;
-}
-.help-steps__item__last-icon {
-  color: #9356dc;
-  padding-right: 20px;
-}
-.help-steps__last {
-  background-color: #f2eafb;
 }
 .help-steps__number {
   position: absolute;
@@ -482,6 +482,12 @@
   margin-top: 5px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt5px-desk {
+    margin-top: 5px;
+  }
+}
+
 .ml5px {
   margin-left: 5px;
 }
@@ -512,6 +518,12 @@
 
 .mt10px {
   margin-top: 10px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt10px-desk {
+    margin-top: 10px;
+  }
 }
 
 .ml10px {
@@ -546,6 +558,12 @@
   margin-top: 15px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt15px-desk {
+    margin-top: 15px;
+  }
+}
+
 .ml15px {
   margin-left: 15px;
 }
@@ -576,6 +594,12 @@
 
 .mt20px {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt20px-desk {
+    margin-top: 20px;
+  }
 }
 
 .ml20px {
@@ -610,6 +634,12 @@
   margin-top: 25px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt25px-desk {
+    margin-top: 25px;
+  }
+}
+
 .ml25px {
   margin-left: 25px;
 }
@@ -640,6 +670,12 @@
 
 .mt30px {
   margin-top: 30px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt30px-desk {
+    margin-top: 30px;
+  }
 }
 
 .ml30px {
@@ -674,6 +710,12 @@
   margin-top: 35px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt35px-desk {
+    margin-top: 35px;
+  }
+}
+
 .ml35px {
   margin-left: 35px;
 }
@@ -704,6 +746,12 @@
 
 .mt40px {
   margin-top: 40px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt40px-desk {
+    margin-top: 40px;
+  }
 }
 
 .ml40px {
@@ -738,6 +786,12 @@
   margin-top: 45px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt45px-desk {
+    margin-top: 45px;
+  }
+}
+
 .ml45px {
   margin-left: 45px;
 }
@@ -768,6 +822,12 @@
 
 .mt50px {
   margin-top: 50px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt50px-desk {
+    margin-top: 50px;
+  }
 }
 
 .ml50px {
@@ -802,6 +862,12 @@
   margin-top: 55px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt55px-desk {
+    margin-top: 55px;
+  }
+}
+
 .ml55px {
   margin-left: 55px;
 }
@@ -832,6 +898,12 @@
 
 .mt60px {
   margin-top: 60px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt60px-desk {
+    margin-top: 60px;
+  }
 }
 
 .ml60px {
@@ -866,6 +938,12 @@
   margin-top: 65px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt65px-desk {
+    margin-top: 65px;
+  }
+}
+
 .ml65px {
   margin-left: 65px;
 }
@@ -896,6 +974,12 @@
 
 .mt70px {
   margin-top: 70px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt70px-desk {
+    margin-top: 70px;
+  }
 }
 
 .ml70px {
@@ -930,6 +1014,12 @@
   margin-top: 75px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt75px-desk {
+    margin-top: 75px;
+  }
+}
+
 .ml75px {
   margin-left: 75px;
 }
@@ -960,6 +1050,12 @@
 
 .mt80px {
   margin-top: 80px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt80px-desk {
+    margin-top: 80px;
+  }
 }
 
 .ml80px {
@@ -994,6 +1090,12 @@
   margin-top: 85px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt85px-desk {
+    margin-top: 85px;
+  }
+}
+
 .ml85px {
   margin-left: 85px;
 }
@@ -1024,6 +1126,12 @@
 
 .mt90px {
   margin-top: 90px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt90px-desk {
+    margin-top: 90px;
+  }
 }
 
 .ml90px {
@@ -1058,6 +1166,12 @@
   margin-top: 95px;
 }
 
+@media screen and (min-width: 1440px) {
+  .mt95px-desk {
+    margin-top: 95px;
+  }
+}
+
 .ml95px {
   margin-left: 95px;
 }
@@ -1088,6 +1202,12 @@
 
 .mt100px {
   margin-top: 100px;
+}
+
+@media screen and (min-width: 1440px) {
+  .mt100px-desk {
+    margin-top: 100px;
+  }
 }
 
 .ml100px {
@@ -1190,6 +1310,11 @@
     width: 1440px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .menu {
+    border-radius: 50px 50px 50px 50px;
+  }
+}
 .menu__title-wrapper {
   display: flex;
   justify-content: space-between;
@@ -1210,9 +1335,11 @@
 @keyframes animation-fade-in {
   from {
     opacity: 0;
+    transform: translate3d(0, 10px, 0);
   }
   to {
     opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 .menu__part__title {
@@ -1251,6 +1378,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 1440px) {
   body {

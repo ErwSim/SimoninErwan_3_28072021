@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 
   @include computer-only {
     background-color: map-get($colors, light-grey);
